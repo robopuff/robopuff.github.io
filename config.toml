@@ -1,0 +1,36 @@
+languageCode = "en"
+title = "Dev on a rock"
+theme = "hemingway2"
+baseURL = "https://robopuff.github.io/"
+
+disqusShortname = "robopuff-githubio"
+description = ""
+keywords = ["php", "zend", "expressive", "life-on-mars"]
+copyright = "&copy; <a href=\"https://robopuff.github.io\">robopuff</a>"
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+
+[params]
+
+[params.highlight]
+style = "github"
+languages = ["go", "dockerfile", "php"]
+
+[[params.social]]
+url = "https://github.com/robopuff"
+fa_icon = "fa-github"
+
+[[params.social]]
+url = "https://codepen.io/robopuff"
+fa_icon = "fa-codepen"
+
+[[params.social]]
+url = "https://keybase.io/robopuff"
+fa_icon = "fa-telegram"
+
+[[params.social]]
+url = "/index.xml"
+fa_icon = "fa-rss"
+
