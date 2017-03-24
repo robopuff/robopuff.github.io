@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Development on Dev on a rock</title>
+    <link>https://robopuff.github.io/categories/development/index.xml</link>
+    <description>Recent content in Development on Dev on a rock</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://robopuff.github.io&#34;&gt;robopuff&lt;/a&gt;</copyright>
+    <atom:link href="https://robopuff.github.io/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Freedom of choice</title>
+      <link>https://robopuff.github.io/post/introduction-to-expressive/</link>
+      <pubDate>Fri, 24 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://robopuff.github.io/post/introduction-to-expressive/</guid>
+      <description>
+
+&lt;h2 id=&#34;what-is-zend-expressive&#34;&gt;What is Zend Expressive&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Zend Expressive&lt;/em&gt; is a PSR-7, middleware-powered micro-framework&lt;/p&gt;
+
+&lt;h3 id=&#34;freedom-of-choice&#34;&gt;Freedom of choice&lt;/h3&gt;
+
+&lt;p&gt;You can choose what libraries you&amp;rsquo;d like to use, and you are not locked in framework environment&lt;/p&gt;
+
+&lt;h3 id=&#34;how-about-pipes&#34;&gt;How about pipes&lt;/h3&gt;
+
+&lt;p&gt;Piping is what ZE is all about&lt;/p&gt;
+
+&lt;h3 id=&#34;use-cases&#34;&gt;Use Cases&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;For smaller projects (out of the box)&lt;/li&gt;
+&lt;li&gt;For projects that require modularity and freedom of choice in libraries&lt;/li&gt;
+&lt;li&gt;For builidng API&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
