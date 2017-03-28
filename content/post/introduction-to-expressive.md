@@ -10,17 +10,17 @@ categories = [
 
 ## What is Zend Expressive
 
-*Zend Expressive* is a PSR-7, middleware-powered _micro_-framework that is built aroud freedom of choice.
-It does not lock you in it's ecosystem, istead it gives you way of building application on your own with
-libraries that make you most comfortable to work with.
+*Zend Expressive* is a [PSR-7](https://github.com/php-fig/http-message), middleware-powered _micro_-framework that is
+built around freedom of choice. It does not lock you in it's ecosystem, instead it gives you way of building application
+on your own with libraries that make you most comfortable to work with.
 In it's skeleton installer it asks you what Router/DI/Template engine you'd like to use.
 
 ### Freedom of choice
 
 You are bound to use one of supported _routers_ and _templating engines_, but implementation of _DI_ is open
 due to a fact that _Expressive_ uses [PSR-11](https://github.com/php-fig/container) Containers.
-Use of middlewares and standarized request/response also gives us unique opportunity to mix it with different
-libraries easer than ever, just simply create a middleware for it, add it to _DI_ (if needed) and it's ready!
+Use of middleware and standardised request/response also gives us unique opportunity to mix it with different
+libraries easier than ever, just simply create a middleware for it, add it to _DI_ (if needed) and it's ready!
 
 {{< gist robopuff caedc94d203aeb7a1283bfabfd18be89>}}
 
@@ -38,7 +38,7 @@ set a flag `programmatic_pipeline` to `true`
 
 {{< gist robopuff 6cf333710445a846db8fd11acd92ea1c >}}
 
-From now on you'll be able to write routes in configuration again, but remember to set all required middlewares
+From now on you'll be able to write routes in configuration again, but remember to set all required middleware
 in correct order or application might not work properly.
 
 {{< gist robopuff 389fedef286cc73bf40502755b58fa84 >}}
@@ -46,7 +46,7 @@ in correct order or application might not work properly.
 ### In a middle of a Middlewares
 
 In _Zend Expressive 2.x_ you can use _single-pass_ ( a [PSR-15](https://github.com/php-fig/fig-standards/tree/master/proposed/http-middleware)
-proposal with [http-interop](https://github.com/http-interop/http-middleware)) or a _double-pass_ middlewares.
+proposal with [http-interop](https://github.com/http-interop/http-middleware) implementation) or a _double-pass_ middleware.
 
 _Single-pass_ refferes to implementation of `Psr\Http\ServerMiddleware\MiddlewareInterface` (or interop implementation 
 `Interop\Http\ServerMiddleware\MiddlewareInterface`) which means that there is a method `process` which takes two parameters
@@ -65,14 +65,15 @@ can be a best shot, as it's out-of-the-box skeleton installer will make it prett
 to choose your preferred _DI_, _Router_ and _Template engine_.
 
 With Middleware approach comes an ease when creating API applications as it gives an opportunity to make it as
-a chain of responsability - one step at a time, want an oAuth2 token check? Add middleware - simple as that!
+a chain of responsibility - one step at a time, want an oAuth2 token check? Add middleware - simple as that!
 
 {{< gist robopuff 1309f64fc9eb016c2a5f33f41e4bb30c >}}
 
 To summarize, Zend Expressive will work best for:
-  * smaller projects, or learning purposes
-  * projects that require modularity and/or freedom of choice in libraries
-  * builidng API
+
+* smaller projects, or learning purposes
+* projects that require modularity and/or freedom of choice in libraries
+* building API
 
 To get started with _Zend Expressive_ you just need to start a new project with composer:
 
