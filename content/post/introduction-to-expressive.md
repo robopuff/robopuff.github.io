@@ -43,6 +43,21 @@ in correct order or application might not work properly.
 
 {{< gist robopuff 389fedef286cc73bf40502755b58fa84 >}}
 
+### In a middle of a Middlewares
+
+In _Zend Expressive 2.x_ you can use _single-pass_ ( a [PSR-15](https://github.com/php-fig/fig-standards/tree/master/proposed/http-middleware)
+proposal with [http-interop](https://github.com/http-interop/http-middleware)) or a _double-pass_ middlewares.
+
+_Single-pass_ refferes to implementation of `Psr\Http\ServerMiddleware\MiddlewareInterface` (or interop implementation 
+`Interop\Http\ServerMiddleware\MiddlewareInterface`) which means that there is a method `process` which takes two parameters
+`ServerRequestInterface $request` and `DelegateInterface $delegate` but invoking it from a chain will require passing only _request_
+(interface is optional, same can be achieved with `__invoke(ServerRequestInterface $request, DelegateInterface $delegate)`
+instead of `process` method).
+{{< gist robopuff 629d4526773d9fc79308476dda6a7c21 >}}
+
+_Double-pass_ is little bit different as it passes more arguments to `$next`, a _request_, _response_ and a callable
+{{< gist robopuff a230db2e8c8a201ea945690fb55aa854 >}}
+
 ### Use Cases in which ZE works best, but is not limited to
 
 It is designed to make life easier, and it delivers. If you want to start a project, a simple one - _Expressive_
