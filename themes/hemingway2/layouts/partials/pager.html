@@ -4,14 +4,14 @@
       <div class="level-left">
         <div class="level-item">
           {{ if .Paginator.HasPrev }}
-          <a class="button" href="{{ .Paginator.Prev.URL }}">
+          <a class="button is-outlined is-primary" href="{{ .Paginator.Prev.URL }}">
             <span class="icon is-small is-marginless">
               <i class="fa fa-angle-left"></i>
             </span>
             Newer
           </a>
           {{ else }}
-          <a class="button is-disabled">
+          <a class="button is-disabled is-outlined is-primary">
             <span class="icon is-small is-marginless">
               <i class="fa fa-angle-left"></i>
             </span>
@@ -23,14 +23,14 @@
       <div class="level-right is-marginless">
         <div class="level-item">
           {{ if .Paginator.HasNext }}
-          <a class="button" href="{{ .Paginator.Next.URL }}">
+          <a class="button is-outlined is-primary" href="{{ .Paginator.Next.URL }}">
             Older
             <span class="icon is-small is-marginless">
               <i class="fa fa-angle-right"></i>
             </span>
           </a>
           {{ else }}
-          <a class="button is-disabled">
+          <a class="button is-disabled is-outlined is-primary">
             Older
             <span class="icon is-small is-marginless">
               <i class="fa fa-angle-right"></i>

@@ -3,10 +3,10 @@ title = "Dev on a rock"
 theme = "hemingway2"
 baseURL = "https://robopuff.github.io/"
 
-disqusShortname = "robopuff-githubio"
+#disqusShortname = "robopuff-githubio"
 description = ""
 keywords = ["php", "zend", "expressive", "life-on-mars"]
-copyright = "&copy; <a href=\"https://robopuff.github.io\">robopuff</a>"
+copyright = "❤ <a href=\"https://robopuff.github.io\">robopuff</a> [<a href=\"https://github.com/robopuff/robopuff.github.io/tree/source\">source</a>]<br />Made with <a href=\"https://gohugo.io\">Hugo</a>, theme based on <a href=\"http://themes.gohugo.io/hemingway2/\">hemingway2</a> by <a href=\"https://github.com/beli3ver\">Malte Kiefer</a>" 
 
 [taxonomies]
 tag = "tags"
@@ -14,9 +14,9 @@ category = "categories"
 
 [params]
 
-[params.highlight]
-style = "github"
-languages = ["go", "dockerfile", "php"]
+#[params.highlight]
+#style = "github"
+#languages = ["go", "dockerfile", "php"]
 
 [[params.social]]
 url = "https://github.com/robopuff"

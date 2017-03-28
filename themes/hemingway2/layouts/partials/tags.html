@@ -1,5 +1,10 @@
-<div class="tags">
+<!--<div class="tags">
     {{ range . }}
         <a class="button is-link" href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a>
+    {{ end }}
+</div>-->
+<div class="tags">
+    {{ range . }}
+    <a class="tag" href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a>
     {{ end }}
 </div>

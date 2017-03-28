@@ -1,132 +1,59 @@
-$blue: #2077b2
-$primary: $blue
-$grey-dark: #42464c
-$family-sans-serif: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif
+// Set variables
+$primary: hsl(348, 100%, 61%)
+$grey-darker: #42464c
+$body-background: #fff
+$size-6: 1.1rem
 
+// Load bulma
 @import "node_modules/bulma/bulma"
 
-.tags a
-  line-height: 1.1em
-  margin-bottom: 1.3em
-
-.container
+// Custom css
+div.container
   max-width: 800px
-  margin: 0 auto
+  line-height: 1.8rem
+  p
+    line-height: inherit
+    color: $black
 
-.content
-  font-size: 16px
-  line-height: 1.75
+h1.main-title
+  color: $grey-darker
 
-.media-content
-  .subtitle+.title
-    margin-bottom: 10px
-  .content
-    line-height: 1.5
+.tags
+  margin: -10px 10px 10px
 
-.hero .nav
-  box-shadow: none
+nav.nav .nav-right .level .level-item
+  margin: 0 4px
+  &:hover
+    color: $blue
+  &:last-child:hover
+    color: $orange
+  span
+    width: $size-3
+    font-size: $size-4
 
-html
-  background-color: transparent
+.container > .content
+  margin-top: 20px
 
-.section
-  padding: 40px 20px
-
-.nav .level-item
-  margin-left: 10px
-
-nav .level
-  padding-top: 14px
-  padding-bot: 6px
-
-.subtitle
-  color: #69707a
-
-.title
-  line-height: 1.25
-  font-size: 24px
   a
-    color: #222324
-  &.notfound
-    font-size: 20vw
+    color: $primary !important
+    &::hover
+      color: darken($primary, 20%) !important
 
-code
-  color: inherit
-  background-color: transparent
-  font-size: 90%
-
-
-
-article+article
-  margin-top: 80px
-
-.content
   h1, h2, h3, h4, h5, h6
-    line-height: 1.25
-    &:not(:first-child)
-      margin-top: 80px
     &::before
-      color: #aeb1b5
+      color: $grey-light
+      font-family: $family-monospace
       font-weight: bold
-    code
-      background-color: #f8f8f8
-  h1+h2:not(:first-child),
-  h2+h3:not(:first-child),
-  h3+h4:not(:first-child),
-  h4+h5:not(:first-child),
-  h5+h6:not(:first-child)
-    margin-top: 20px
-  h1
-    font-size: 24px
-    &::before
-      content: "# "
-  h2
-    font-size: 22px
-    &::before
-      content: "## "
-  h3
-    font-size: 20px
-    &::before
-      content: "### "
-  h4
-    font-size: 18px
-    &::before
-      content: "#### "
-  h5
-    font-size: 17px
-    &::before
-      content: "##### "
-  h6
-    font-size: 16px
-    &::before
-      content: "###### "
-  p,
-  ol,
-  ul,
-  pre,
-  table
-    &:not(:last-child)
-      margin-bottom: 1.5em
-  table
-    td,
-    th
-      border: 1px solid #d3d6db
-      padding: 8px 10px
-      vertical-align: top
-  & > code, p > code
-    font-size: 90%
-    padding: 2px 4px
-    margin: 0 2px
-    border: 1px solid #ddd
-    border-radius: 4px
-    background-color: #f8f8f8
-    color: #42464c
-  pre
-    code
-      font-size: 90%
-      padding: 1em
-      line-height: 1.5
-  li
-    pre,
-    table
-      margin-bottom: 1.5em
+      font-size: 0.8em
+
+  h2::before
+    font-size: 0.9em
+    content: "# "
+  h3::before
+    content: "## "
+  h4::before
+    content: "### "
+  h5::before
+    content: "#### "
+  h6::before
+    content: "##### "

@@ -10,6 +10,11 @@
         {{ partial "tags" .Params.tags }}
       {{ end }}
       <div class="content">
+        {{ if .Params.description }}
+        {{ .Params.description | plainify | safeHTML }}
+        {{ end }}
+      </div>
+      <!--<div class="content">
         {{ .Summary | plainify | safeHTML }}
         {{ if .Truncated }}
         ...<a class="button is-link" href="{{ .Permalink }}" style="height:28px">
@@ -19,7 +24,7 @@
           </span>
         </a>
         {{ end }}
-      </div>
+    </div>-->
     </article>
     {{ end }}
   </div>
