@@ -20,17 +20,17 @@
 
 &lt;h2 id=&#34;what-is-zend-expressive&#34;&gt;What is Zend Expressive&lt;/h2&gt;
 
-&lt;p&gt;&lt;em&gt;Zend Expressive&lt;/em&gt; is a PSR-7, middleware-powered &lt;em&gt;micro&lt;/em&gt;-framework that is built aroud freedom of choice.
-It does not lock you in it&amp;rsquo;s ecosystem, istead it gives you way of building application on your own with
-libraries that make you most comfortable to work with.
+&lt;p&gt;&lt;em&gt;Zend Expressive&lt;/em&gt; is a &lt;a href=&#34;https://github.com/php-fig/http-message&#34;&gt;PSR-7&lt;/a&gt;, middleware-powered &lt;em&gt;micro&lt;/em&gt;-framework that is
+built around freedom of choice. It does not lock you in it&amp;rsquo;s ecosystem, instead it gives you way of building application
+on your own with libraries that make you most comfortable to work with.
 In it&amp;rsquo;s skeleton installer it asks you what Router/DI/Template engine you&amp;rsquo;d like to use.&lt;/p&gt;
 
 &lt;h3 id=&#34;freedom-of-choice&#34;&gt;Freedom of choice&lt;/h3&gt;
 
 &lt;p&gt;You are bound to use one of supported &lt;em&gt;routers&lt;/em&gt; and &lt;em&gt;templating engines&lt;/em&gt;, but implementation of &lt;em&gt;DI&lt;/em&gt; is open
 due to a fact that &lt;em&gt;Expressive&lt;/em&gt; uses &lt;a href=&#34;https://github.com/php-fig/container&#34;&gt;PSR-11&lt;/a&gt; Containers.
-Use of middlewares and standarized request/response also gives us unique opportunity to mix it with different
-libraries easer than ever, just simply create a middleware for it, add it to &lt;em&gt;DI&lt;/em&gt; (if needed) and it&amp;rsquo;s ready!&lt;/p&gt;
+Use of middleware and standardised request/response also gives us unique opportunity to mix it with different
+libraries easier than ever, just simply create a middleware for it, add it to &lt;em&gt;DI&lt;/em&gt; (if needed) and it&amp;rsquo;s ready!&lt;/p&gt;
 
 &lt;script src=&#34;//gist.github.com/robopuff/caedc94d203aeb7a1283bfabfd18be89.js&#34;&gt;&lt;/script&gt;
 
@@ -48,7 +48,7 @@ set a flag &lt;code&gt;programmatic_pipeline&lt;/code&gt; to &lt;code&gt;true&lt
 
 &lt;script src=&#34;//gist.github.com/robopuff/6cf333710445a846db8fd11acd92ea1c.js&#34;&gt;&lt;/script&gt;
 
-&lt;p&gt;From now on you&amp;rsquo;ll be able to write routes in configuration again, but remember to set all required middlewares
+&lt;p&gt;From now on you&amp;rsquo;ll be able to write routes in configuration again, but remember to set all required middleware
 in correct order or application might not work properly.&lt;/p&gt;
 
 &lt;script src=&#34;//gist.github.com/robopuff/389fedef286cc73bf40502755b58fa84.js&#34;&gt;&lt;/script&gt;
@@ -56,7 +56,7 @@ in correct order or application might not work properly.&lt;/p&gt;
 &lt;h3 id=&#34;in-a-middle-of-a-middlewares&#34;&gt;In a middle of a Middlewares&lt;/h3&gt;
 
 &lt;p&gt;In &lt;em&gt;Zend Expressive 2.x&lt;/em&gt; you can use &lt;em&gt;single-pass&lt;/em&gt; ( a &lt;a href=&#34;https://github.com/php-fig/fig-standards/tree/master/proposed/http-middleware&#34;&gt;PSR-15&lt;/a&gt;
-proposal with &lt;a href=&#34;https://github.com/http-interop/http-middleware&#34;&gt;http-interop&lt;/a&gt;) or a &lt;em&gt;double-pass&lt;/em&gt; middlewares.&lt;/p&gt;
+proposal with &lt;a href=&#34;https://github.com/http-interop/http-middleware&#34;&gt;http-interop&lt;/a&gt; implementation) or a &lt;em&gt;double-pass&lt;/em&gt; middleware.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Single-pass&lt;/em&gt; refferes to implementation of &lt;code&gt;Psr\Http\ServerMiddleware\MiddlewareInterface&lt;/code&gt; (or interop implementation
 &lt;code&gt;Interop\Http\ServerMiddleware\MiddlewareInterface&lt;/code&gt;) which means that there is a method &lt;code&gt;process&lt;/code&gt; which takes two parameters
@@ -75,14 +75,17 @@ can be a best shot, as it&amp;rsquo;s out-of-the-box skeleton installer will mak
 to choose your preferred &lt;em&gt;DI&lt;/em&gt;, &lt;em&gt;Router&lt;/em&gt; and &lt;em&gt;Template engine&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;With Middleware approach comes an ease when creating API applications as it gives an opportunity to make it as
-a chain of responsability - one step at a time, want an oAuth2 token check? Add middleware - simple as that!&lt;/p&gt;
+a chain of responsibility - one step at a time, want an oAuth2 token check? Add middleware - simple as that!&lt;/p&gt;
 
 &lt;script src=&#34;//gist.github.com/robopuff/1309f64fc9eb016c2a5f33f41e4bb30c.js&#34;&gt;&lt;/script&gt;
 
-&lt;p&gt;To summarize, Zend Expressive will work best for:
-  * smaller projects, or learning purposes
-  * projects that require modularity and/or freedom of choice in libraries
-  * builidng API&lt;/p&gt;
+&lt;p&gt;To summarize, Zend Expressive will work best for:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;smaller projects, or learning purposes&lt;/li&gt;
+&lt;li&gt;projects that require modularity and/or freedom of choice in libraries&lt;/li&gt;
+&lt;li&gt;building API&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;To get started with &lt;em&gt;Zend Expressive&lt;/em&gt; you just need to start a new project with composer:&lt;/p&gt;
 

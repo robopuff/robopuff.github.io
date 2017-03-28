@@ -74,17 +74,17 @@
 
 <h2 id="what-is-zend-expressive">What is Zend Expressive</h2>
 
-<p><em>Zend Expressive</em> is a PSR-7, middleware-powered <em>micro</em>-framework that is built aroud freedom of choice.
-It does not lock you in it&rsquo;s ecosystem, istead it gives you way of building application on your own with
-libraries that make you most comfortable to work with.
+<p><em>Zend Expressive</em> is a <a href="https://github.com/php-fig/http-message">PSR-7</a>, middleware-powered <em>micro</em>-framework that is
+built around freedom of choice. It does not lock you in it&rsquo;s ecosystem, instead it gives you way of building application
+on your own with libraries that make you most comfortable to work with.
 In it&rsquo;s skeleton installer it asks you what Router/DI/Template engine you&rsquo;d like to use.</p>
 
 <h3 id="freedom-of-choice">Freedom of choice</h3>
 
 <p>You are bound to use one of supported <em>routers</em> and <em>templating engines</em>, but implementation of <em>DI</em> is open
 due to a fact that <em>Expressive</em> uses <a href="https://github.com/php-fig/container">PSR-11</a> Containers.
-Use of middlewares and standarized request/response also gives us unique opportunity to mix it with different
-libraries easer than ever, just simply create a middleware for it, add it to <em>DI</em> (if needed) and it&rsquo;s ready!</p>
+Use of middleware and standardised request/response also gives us unique opportunity to mix it with different
+libraries easier than ever, just simply create a middleware for it, add it to <em>DI</em> (if needed) and it&rsquo;s ready!</p>
 
 <script src="//gist.github.com/robopuff/caedc94d203aeb7a1283bfabfd18be89.js"></script>
 
@@ -102,7 +102,7 @@ set a flag <code>programmatic_pipeline</code> to <code>true</code></p>
 
 <script src="//gist.github.com/robopuff/6cf333710445a846db8fd11acd92ea1c.js"></script>
 
-<p>From now on you&rsquo;ll be able to write routes in configuration again, but remember to set all required middlewares
+<p>From now on you&rsquo;ll be able to write routes in configuration again, but remember to set all required middleware
 in correct order or application might not work properly.</p>
 
 <script src="//gist.github.com/robopuff/389fedef286cc73bf40502755b58fa84.js"></script>
@@ -110,7 +110,7 @@ in correct order or application might not work properly.</p>
 <h3 id="in-a-middle-of-a-middlewares">In a middle of a Middlewares</h3>
 
 <p>In <em>Zend Expressive 2.x</em> you can use <em>single-pass</em> ( a <a href="https://github.com/php-fig/fig-standards/tree/master/proposed/http-middleware">PSR-15</a>
-proposal with <a href="https://github.com/http-interop/http-middleware">http-interop</a>) or a <em>double-pass</em> middlewares.</p>
+proposal with <a href="https://github.com/http-interop/http-middleware">http-interop</a> implementation) or a <em>double-pass</em> middleware.</p>
 
 <p><em>Single-pass</em> refferes to implementation of <code>Psr\Http\ServerMiddleware\MiddlewareInterface</code> (or interop implementation
 <code>Interop\Http\ServerMiddleware\MiddlewareInterface</code>) which means that there is a method <code>process</code> which takes two parameters
@@ -129,14 +129,17 @@ can be a best shot, as it&rsquo;s out-of-the-box skeleton installer will make it
 to choose your preferred <em>DI</em>, <em>Router</em> and <em>Template engine</em>.</p>
 
 <p>With Middleware approach comes an ease when creating API applications as it gives an opportunity to make it as
-a chain of responsability - one step at a time, want an oAuth2 token check? Add middleware - simple as that!</p>
+a chain of responsibility - one step at a time, want an oAuth2 token check? Add middleware - simple as that!</p>
 
 <script src="//gist.github.com/robopuff/1309f64fc9eb016c2a5f33f41e4bb30c.js"></script>
 
-<p>To summarize, Zend Expressive will work best for:
-  * smaller projects, or learning purposes
-  * projects that require modularity and/or freedom of choice in libraries
-  * builidng API</p>
+<p>To summarize, Zend Expressive will work best for:</p>
+
+<ul>
+<li>smaller projects, or learning purposes</li>
+<li>projects that require modularity and/or freedom of choice in libraries</li>
+<li>building API</li>
+</ul>
 
 <p>To get started with <em>Zend Expressive</em> you just need to start a new project with composer:</p>
 
