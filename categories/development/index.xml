@@ -52,6 +52,21 @@ in correct order or application might not work properly.&lt;/p&gt;
 
 &lt;script src=&#34;//gist.github.com/robopuff/389fedef286cc73bf40502755b58fa84.js&#34;&gt;&lt;/script&gt;
 
+&lt;h3 id=&#34;in-a-middle-of-a-middlewares&#34;&gt;In a middle of a Middlewares&lt;/h3&gt;
+
+&lt;p&gt;In &lt;em&gt;Zend Expressive 2.x&lt;/em&gt; you can use &lt;em&gt;single-pass&lt;/em&gt; ( a &lt;a href=&#34;https://github.com/php-fig/fig-standards/tree/master/proposed/http-middleware&#34;&gt;PSR-15&lt;/a&gt;
+proposal with &lt;a href=&#34;https://github.com/http-interop/http-middleware&#34;&gt;http-interop&lt;/a&gt;) or a &lt;em&gt;double-pass&lt;/em&gt; middlewares.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Single-pass&lt;/em&gt; refferes to implementation of &lt;code&gt;Psr\Http\ServerMiddleware\MiddlewareInterface&lt;/code&gt; (or interop implementation
+&lt;code&gt;Interop\Http\ServerMiddleware\MiddlewareInterface&lt;/code&gt;) which means that there is a method &lt;code&gt;process&lt;/code&gt; which takes two parameters
+&lt;code&gt;ServerRequestInterface $request&lt;/code&gt; and &lt;code&gt;DelegateInterface $delegate&lt;/code&gt; but invoking it from a chain will require passing only &lt;em&gt;request&lt;/em&gt;
+(interface is optional, same can be achieved with &lt;code&gt;__invoke(ServerRequestInterface $request, DelegateInterface $delegate)&lt;/code&gt;
+instead of &lt;code&gt;process&lt;/code&gt; method).
+&lt;script src=&#34;//gist.github.com/robopuff/629d4526773d9fc79308476dda6a7c21.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Double-pass&lt;/em&gt; is little bit different as it passes more arguments to &lt;code&gt;$next&lt;/code&gt;, a &lt;em&gt;request&lt;/em&gt;, &lt;em&gt;response&lt;/em&gt; and a callable
+&lt;script src=&#34;//gist.github.com/robopuff/a230db2e8c8a201ea945690fb55aa854.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
 &lt;h3 id=&#34;use-cases-in-which-ze-works-best-but-is-not-limited-to&#34;&gt;Use Cases in which ZE works best, but is not limited to&lt;/h3&gt;
 
 &lt;p&gt;It is designed to make life easier, and it delivers. If you want to start a project, a simple one - &lt;em&gt;Expressive&lt;/em&gt;

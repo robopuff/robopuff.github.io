@@ -107,6 +107,21 @@ in correct order or application might not work properly.</p>
 
 <script src="//gist.github.com/robopuff/389fedef286cc73bf40502755b58fa84.js"></script>
 
+<h3 id="in-a-middle-of-a-middlewares">In a middle of a Middlewares</h3>
+
+<p>In <em>Zend Expressive 2.x</em> you can use <em>single-pass</em> ( a <a href="https://github.com/php-fig/fig-standards/tree/master/proposed/http-middleware">PSR-15</a>
+proposal with <a href="https://github.com/http-interop/http-middleware">http-interop</a>) or a <em>double-pass</em> middlewares.</p>
+
+<p><em>Single-pass</em> refferes to implementation of <code>Psr\Http\ServerMiddleware\MiddlewareInterface</code> (or interop implementation
+<code>Interop\Http\ServerMiddleware\MiddlewareInterface</code>) which means that there is a method <code>process</code> which takes two parameters
+<code>ServerRequestInterface $request</code> and <code>DelegateInterface $delegate</code> but invoking it from a chain will require passing only <em>request</em>
+(interface is optional, same can be achieved with <code>__invoke(ServerRequestInterface $request, DelegateInterface $delegate)</code>
+instead of <code>process</code> method).
+<script src="//gist.github.com/robopuff/629d4526773d9fc79308476dda6a7c21.js"></script></p>
+
+<p><em>Double-pass</em> is little bit different as it passes more arguments to <code>$next</code>, a <em>request</em>, <em>response</em> and a callable
+<script src="//gist.github.com/robopuff/a230db2e8c8a201ea945690fb55aa854.js"></script></p>
+
 <h3 id="use-cases-in-which-ze-works-best-but-is-not-limited-to">Use Cases in which ZE works best, but is not limited to</h3>
 
 <p>It is designed to make life easier, and it delivers. If you want to start a project, a simple one - <em>Expressive</em>
