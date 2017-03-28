@@ -6,36 +6,74 @@
     <description>Recent content in Zend on Dev on a rock</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>&amp;copy; &lt;a href=&#34;https://robopuff.github.io&#34;&gt;robopuff&lt;/a&gt;</copyright>
+    <copyright>❤ &lt;a href=&#34;https://robopuff.github.io&#34;&gt;robopuff&lt;/a&gt; [&lt;a href=&#34;https://github.com/robopuff/robopuff.github.io/tree/source&#34;&gt;source&lt;/a&gt;]&lt;br /&gt;Made with &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt;, theme based on &lt;a href=&#34;http://themes.gohugo.io/hemingway2/&#34;&gt;hemingway2&lt;/a&gt; by &lt;a href=&#34;https://github.com/beli3ver&#34;&gt;Malte Kiefer&lt;/a&gt;</copyright>
     <atom:link href="https://robopuff.github.io/categories/zend/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Freedom of choice</title>
+      <title>Freedom of choice, an introduction to Zend Expressive</title>
       <link>https://robopuff.github.io/post/introduction-to-expressive/</link>
-      <pubDate>Fri, 24 Mar 2017 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 28 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>https://robopuff.github.io/post/introduction-to-expressive/</guid>
       <description>
 
 &lt;h2 id=&#34;what-is-zend-expressive&#34;&gt;What is Zend Expressive&lt;/h2&gt;
 
-&lt;p&gt;&lt;em&gt;Zend Expressive&lt;/em&gt; is a PSR-7, middleware-powered micro-framework&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Zend Expressive&lt;/em&gt; is a PSR-7, middleware-powered &lt;em&gt;micro&lt;/em&gt;-framework that is built aroud freedom of choice.
+It does not lock you in it&amp;rsquo;s ecosystem, istead it gives you way of building application on your own with
+libraries that make you most comfortable to work with.
+In it&amp;rsquo;s skeleton installer it asks you what Router/DI/Template engine you&amp;rsquo;d like to use.&lt;/p&gt;
 
 &lt;h3 id=&#34;freedom-of-choice&#34;&gt;Freedom of choice&lt;/h3&gt;
 
-&lt;p&gt;You can choose what libraries you&amp;rsquo;d like to use, and you are not locked in framework environment&lt;/p&gt;
+&lt;p&gt;You are bound to use one of supported &lt;em&gt;routers&lt;/em&gt; and &lt;em&gt;templating engines&lt;/em&gt;, but implementation of &lt;em&gt;DI&lt;/em&gt; is open
+due to a fact that &lt;em&gt;Expressive&lt;/em&gt; uses &lt;a href=&#34;https://github.com/php-fig/container&#34;&gt;PSR-11&lt;/a&gt; Containers.
+Use of middlewares and standarized request/response also gives us unique opportunity to mix it with different
+libraries easer than ever, just simply create a middleware for it, add it to &lt;em&gt;DI&lt;/em&gt; (if needed) and it&amp;rsquo;s ready!&lt;/p&gt;
+
+&lt;script src=&#34;//gist.github.com/robopuff/caedc94d203aeb7a1283bfabfd18be89.js&#34;&gt;&lt;/script&gt;
+
+&lt;script src=&#34;//gist.github.com/robopuff/921f3ff88f3de84354d98976fbf2252e.js&#34;&gt;&lt;/script&gt;
 
 &lt;h3 id=&#34;how-about-pipes&#34;&gt;How about pipes&lt;/h3&gt;
 
-&lt;p&gt;Piping is what ZE is all about&lt;/p&gt;
+&lt;p&gt;Zend Expressive 2.x is all about piping, as a part of documentation currently stands for programmatic approach
+which is due to a fact that this way gives you more flexibility and possibilities.&lt;/p&gt;
 
-&lt;h3 id=&#34;use-cases&#34;&gt;Use Cases&lt;/h3&gt;
+&lt;script src=&#34;//gist.github.com/robopuff/3db45dec553d104d9105333933339ec2.js&#34;&gt;&lt;/script&gt;
 
-&lt;ul&gt;
-&lt;li&gt;For smaller projects (out of the box)&lt;/li&gt;
-&lt;li&gt;For projects that require modularity and freedom of choice in libraries&lt;/li&gt;
-&lt;li&gt;For builidng API&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;That&amp;rsquo;s beeing said, you don&amp;rsquo;t have to use programmatic approach and still use configuration to do it just simply
+set a flag &lt;code&gt;programmatic_pipeline&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
+
+&lt;script src=&#34;//gist.github.com/robopuff/6cf333710445a846db8fd11acd92ea1c.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;From now on you&amp;rsquo;ll be able to write routes in configuration again, but remember to set all required middlewares
+in correct order or application might not work properly.&lt;/p&gt;
+
+&lt;script src=&#34;//gist.github.com/robopuff/389fedef286cc73bf40502755b58fa84.js&#34;&gt;&lt;/script&gt;
+
+&lt;h3 id=&#34;use-cases-in-which-ze-works-best-but-is-not-limited-to&#34;&gt;Use Cases in which ZE works best, but is not limited to&lt;/h3&gt;
+
+&lt;p&gt;It is designed to make life easier, and it delivers. If you want to start a project, a simple one - &lt;em&gt;Expressive&lt;/em&gt;
+can be a best shot, as it&amp;rsquo;s out-of-the-box skeleton installer will make it pretty easy and yet keeps allows you
+to choose your preferred &lt;em&gt;DI&lt;/em&gt;, &lt;em&gt;Router&lt;/em&gt; and &lt;em&gt;Template engine&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;With Middleware approach comes an ease when creating API applications as it gives an opportunity to make it as
+a chain of responsability - one step at a time, want an oAuth2 token check? Add middleware - simple as that!&lt;/p&gt;
+
+&lt;script src=&#34;//gist.github.com/robopuff/1309f64fc9eb016c2a5f33f41e4bb30c.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;To summarize, Zend Expressive will work best for:
+  * smaller projects, or learning purposes
+  * projects that require modularity and/or freedom of choice in libraries
+  * builidng API&lt;/p&gt;
+
+&lt;p&gt;To get started with &lt;em&gt;Zend Expressive&lt;/em&gt; you just need to start a new project with composer:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;composer create-project zendframework/zend-expressive-skeleton &amp;lt;project-path&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;You can check &lt;em&gt;Zend Expressive&lt;/em&gt; official documentation &lt;a href=&#34;https://docs.zendframework.com/zend-expressive/&#34;&gt;here&lt;/a&gt;,
+and get &lt;em&gt;Zend Expressive Skeleton&lt;/em&gt; &lt;a href=&#34;https://github.com/zendframework/zend-expressive-skeleton&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
