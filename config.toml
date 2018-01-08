@@ -27,8 +27,12 @@ url = "https://codepen.io/robopuff"
 fa_icon = "fa-codepen"
 
 [[params.social]]
-url = "https://keybase.io/robopuff"
+url = "http://telegram.me/robopuff"
 fa_icon = "fa-telegram"
+
+[[params.social]]
+url = "https://keybase.io/robopuff"
+fa_icon = "fa-key"
 
 [[params.social]]
 url = "/index.xml"
